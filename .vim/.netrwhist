@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/nego/negoscript'
+let g:netrw_dirhist_2='/home/zhangb/script'
+let g:netrw_dirhist_3='/home/zhangb/software/pixiv_scrapy/Pixiv-Crawler/pixiv_beta/spiders'
+let g:netrw_dirhist_4='/var/log/filebeat'
+let g:netrw_dirhist_5='/home/zhangb/software'
+let g:netrw_dirhist_6='/home/zhangb/software/yaourt'
+let g:netrw_dirhist_7='/home/zhangb/.ssh'
+let g:netrw_dirhist_8='/home/zhangb/work/ConvNetQuake/ConvNetQuake/tflib'

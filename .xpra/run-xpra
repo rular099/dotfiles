@@ -1,0 +1,55 @@
+#!/bin/sh
+CSF_SHMessage='/opt/opencascade/src/SHMessage'; export CSF_SHMessage
+CSF_StandardLiteDefaults='/opt/opencascade/src/StdResource'; export CSF_StandardLiteDefaults
+CSF_XCAFDefaults='/opt/opencascade/src/StdResource'; export CSF_XCAFDefaults
+CSF_UnitsLexicon='/opt/opencascade/src/UnitsAPI/Lexi_Expr.dat'; export CSF_UnitsLexicon
+SSH_CLIENT='10.2.5.215 52818 22'; export SSH_CLIENT
+QT_IM_MODULE='fcitx'; export QT_IM_MODULE
+CSF_UnitsDefinition='/opt/opencascade/src/UnitsAPI/Units.dat'; export CSF_UnitsDefinition
+USER='zhangb'; export USER
+MMGT_CLEAR='1'; export MMGT_CLEAR
+HOME='/home/zhangb'; export HOME
+LD_LIBRARY_PATH='/opt/opencascade/lib':"$LD_LIBRARY_PATH"; export LD_LIBRARY_PATH
+LANG='zh_CN.UTF-8'; export LANG
+TERM='xterm'; export TERM
+SHELL='/bin/bash'; export SHELL
+SHLVL='1'; export SHLVL
+CSF_IGESDefaults='/opt/opencascade/src/XSTEPResource'; export CSF_IGESDefaults
+CASROOT='/opt/opencascade'; export CASROOT
+CSF_PluginDefaults='/opt/opencascade/src/StdResource'; export CSF_PluginDefaults
+XMODIFIERS='@im=fcitx'; export XMODIFIERS
+LOGNAME='zhangb'; export LOGNAME
+CSF_XSMessage='/opt/opencascade/src/XSMessage'; export CSF_XSMessage
+XDG_RUNTIME_DIR='/run/user/1000'; export XDG_RUNTIME_DIR
+CSF_STEPDefaults='/opt/opencascade/src/XSTEPResource'; export CSF_STEPDefaults
+PATH='/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/opencascade/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl':"$PATH"; export PATH
+CSF_StandardDefaults='/opt/opencascade/src/StdResource'; export CSF_StandardDefaults
+CSF_LANGUAGE='us'; export CSF_LANGUAGE
+XDG_SESSION_ID='c6'; export XDG_SESSION_ID
+DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'; export DBUS_SESSION_BUS_ADDRESS
+_='/usr/bin/xpra'; export _
+GTK_IM_MODULE='fcitx'; export GTK_IM_MODULE
+CSF_MDTVTexturesDirectory='/opt/opencascade/src/Textures'; export CSF_MDTVTexturesDirectory
+CSF_EXCEPTION_PROMPT='1'; export CSF_EXCEPTION_PROMPT
+SSH_TTY='/dev/pts/0'; export SSH_TTY
+CSF_GraphicShr='/opt/opencascade/lib/libTKOpenGl.so'; export CSF_GraphicShr
+PWD='/home/zhangb'; export PWD
+CSF_XmlOcafResource='/opt/opencascade/src/XmlOcafResource'; export CSF_XmlOcafResource
+P4EST_DIR='/opt/p4est-deal-ii/'; export P4EST_DIR
+MAIL='/var/spool/mail/zhangb'; export MAIL
+SSH_CONNECTION='10.2.5.215 52818 10.2.10.73 22'; export SSH_CONNECTION
+cd '/home/zhangb'
+_XPRA_PYTHON='/usr/bin/python2'
+_XPRA_SCRIPT='/usr/bin/xpra'
+
+if which "$_XPRA_PYTHON" > /dev/null && [ -e "$_XPRA_SCRIPT" ]; then
+    # Happypath:
+    exec "$_XPRA_PYTHON" "$_XPRA_SCRIPT" "$@"
+else
+    cat >&2 <<END
+    Could not find one or both of '$_XPRA_PYTHON' and '$_XPRA_SCRIPT'
+    Perhaps your environment has changed since the xpra server was started?
+    I'll just try executing 'xpra' with current PATH, and hope...
+END
+    exec xpra "$@"
+fi

@@ -1,0 +1,8 @@
+#export LC_ALL=zh_CN.UTF-8
+export ECORE_IMF_MODULE="xim"
+export XIM="fcitx"
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
+export XIM_PROGRAM="fcitx"
+#export XIM_ARGS="-d"
